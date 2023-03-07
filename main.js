@@ -39,7 +39,7 @@ function each(coll, f) {
     return acc
   }
 
-
+//function make car to generate a class of car
 function makecare(name,model,color,price,power,sale,type,url){
     var car={}
     car.name=name
@@ -56,57 +56,69 @@ function makecare(name,model,color,price,power,sale,type,url){
  power on CV unit
  sale on % unit 
   */
+//data base of cars 
+var A_CLASS=makecare('A-CLASS',"mercades","black",80,30,30,"travel")
+var C_CLASS=makecare('C_CLASS',"mercedes",'blue',60,20,45,"normal")
+var E_CLASS=makecare("E-CLASS","mercedes","red",70,22,25,"formal")
 
-var classe_G=makecare('G-Class',"mercades","black",80,30,30,"travel")
-var class_C=makecare('Class-C',"mercedes",'blue',60,20,45,"normal")
-var class_s=makecare("Class-S","mercedes","red",70,22,25,"formal")
+var  CAYENNE=makecare(" CAYENNE","Porshe","red",40,6,70,"popular")
+var Panamera=makecare('PANAMERA','Porshe',"white",25,4,78,"popular")
+var MACAN=makecare(" MACAN","Porshe","black",45,8,50,"normal")
 
-var golf=makecare("Golf 7","Volswagen","red",40,6,70,"popular")
-var polo=makecare('Polo8 8','Volswagen',"white",25,4,78,"popular")
-var passat=makecare("Passat","Volswagen","black",45,8,50,"normal")
+var BMW3=makecare("BMW3","BMW","blue",90,30,20,"sport")
+var X7=makecare("X7","BMW","red",98,32,15,"sport") 
+var X6=makecare("X6","BMW","white",88,25,51,"travel")
 
-var i4=makecare("I4","BMW","blue",90,30,20,"sport")
-var i5=makecare("I5","BMW","red",98,32,15,"sport") 
-var x5=makecare("X5","BMW","white",88,25,51,"travel")
-
-var a6=makecare("A6","Audi","white",88,25,55,"normal")
-var q6=makecare("Q6","Audi","black",60,30,33,"travel")
-var q4=makecare("Q4","Audi","black",45,20,38,"normal")
+var S5=makecare("S5","Audi","white",88,25,55,"normal")
+var Q7=makecare("Q7","Audi","black",60,30,33,"travel")
+var Q4=makecare("Q4","Audi","black",45,20,38,"normal")
  
-var mercades=[class_C,class_s,classe_G]
-var WV=[golf,polo,passat]
-var BMV=[i4,i5,x5]
-var audi=[a6,q6,q4]
+var mercades=[A_CLASS,C_CLASS,E_CLASS]
+var Porshe=[CAYENNE,Panamera,MACAN]
+var BMV=[BMW3,X7,X6]
+var audi=[S5,Q7,Q4]
 
-var catalogue=[mercades,WV,BMV,audi]
+var catalogue=[mercades,Porshe,BMV,audi]
 function makeagency(name){
     var agency={}
     agency.name=name
     agency.catalogue=catalogue
     agency.bestsale=bestsale
-    /*agency.cheapest=cheapest
-    agency.expensive=Mostexpensive*/
     agency.power=power
     agency.color=color 
+    /*agency.display=display*/
     return agency
 }
-var bestsale=function(){
+/*function displayobject(obj,query){
+  if(Object.keys(obj).includes(query)){
+    return obj.query
+  }
+  return false 
 
+}
+function displayarrofobj(arr,query){
+  var rslt=map(arr,function(elm,i){
+    return displayobject(elm,query)
+  })
+  return 
+}*/
+
+var bestsale=function(){
+var arr=[]
     var rslt=map(this.catalogue,function(elm){
          return filter(elm,function(obj){
-            console.log(obj)
             return obj["sale"]>60
     }) 
     })
-    console.log(rslt)
     var best=filter(rslt,function(elm,i){
         return elm.length>0
     })
-return best 
+return arr=best[0]
     
 }
 
 var power=function(){
+  var arr=[]
     var rslt=map(this.catalogue,function(elm,i){
         return filter(elm,function(obj,i){
             return obj["power"]>=28
@@ -115,8 +127,10 @@ var power=function(){
 var pow= filter(rslt,function(elm){
     return elm.length>0
 })
-return pow
+ arr=[pow[0][0],pow[1][0],pow[1][1],pow[2][0]]
+ return arr
 }
+
 var color=function(clr){
     var rslt=map(this.catalogue,function(elm,i){
         return filter(elm,function(obj,i){
@@ -128,26 +142,55 @@ var color=function(clr){
  })
  return col
 }
+/*var display=function(){
+ var rslt =map(this.power,function(elm,i){
+    return map(elm,function(obj,key){
+         obj["power"]
+    })
+  })
+  return rslt
+}*/
 
-    
+
+var carnation=makeagency("CarNation")
 
 
-
-//DOM
-/*var mrcds=document.getElementById("mrcds").innerText
-var vw=document.getElementById("wv").innerText
-var bm=document.getElementById("bm").innerText
-var audi=document.getElementById("adi").innerText
-
-var mybtn=document.getElementById("btn")*/
-
+//used for the select bar , 
 function redirect() {
   var selectBox = document.getElementById("format");
   var selectedValue = selectBox.options[selectBox.selectedIndex].value;
   window.location.href = selectedValue;
 }
 
-   
+//jquery part
+
+$(document).ready(function(){
+
+$('#best').click(function(){
+  var rslt=""
+  for(var i=0 ;i<carnation.bestsale().length;i++){
+  
+   rslt+=$('#hello').append(`<p style="color:#BE2D0F">${carnation.bestsale()[i]["name"]}</p>`)
+  }
+  return rslt 
+ 
+})
+
+$('#power').click(function(){
+  var rslt=""
+  for(var i=0;i<carnation.power().length;i++){
+    rslt+=$('#hey').append(`<p style="color:#BE2D0F">${carnation.power()[0]["name"]}</p>`)
+  }
+  return rslt 
+})
+
+
+$("col").click(function(){
+  show(carnation.color("black"))
+})
+
+}) 
+
           
     
     

@@ -1,54 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="BMW.css">
+    <link rel="stylesheet" href="mercedes.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="BMW.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMW</title>
+    <style>
+        .pics {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            margin: 0 10px;
+        }
+        .btn {
+            display: block;
+            margin-top: 10px;
+        }
+        p {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">CarNation</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Store</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe src="https://streamable.com/e/i53tfl" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">CarNation</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="best"  href="#">best selling</s></a>
+          </li>
+          <li class="nav-item">
+            <a  class="nav-link" id="power" href="#">Most Powerful</a>
+          </li>
+          <li class="nav-item">
+            <a  class="nav-link" id="col" href="#">Available Colors</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> 
     <div class="pics">
-    <img src="https://www.bmwusa.com/content/dam/bmwusa/common/vehicles/2022/my23/4-series/gran-coupe/core-models/mobile/BMW-MY23-4Series-GC-DP-430i-Feature-01-Mobile.jpg">
-    <img src="https://media.ed.edmunds-media.com/bmw/x5/2021/oem/2021_bmw_x5_4dr-suv_m50i_fq_oem_1_1280x855.jpg">
-    <img src="">
-</div>
-    
+        <div>
+            <img src="./images/7.jpg"/>
+            <a href="https://www.bmwusa.com/vehicles/3-series/sedan/bmw-m.html"><button class="btn btn-primary">BUY NOW !</button></a>
+            <p>BMW 3 Series M340i</p>
+        </div>
+        <div>
+            <img src="./images/8.jpg"/>
+            <a href="https://www.bmw-tunisia.com/fr/all-models/x-series/x7/2022/bmw-x7-apercu.html?psafe_param=1&tl=sea-gl-TN_BMW_Series-3_PERFORMACE_MAX-mix-miy-.-sech-Series3-.---.-.&gclid=CjwKCAiA3pugBhAwEiwAWFzwdZpG-bNB2_cwxu0hMXPtPfqmyRWmQacRnl5_7a8gLH3zZsaML1dmhhoCv00QAvD_BwE"><button class="btn btn-primary">BUY NOW !</button></a>
+            <p>BMW X7</p>
+        </div>
+        <div>
+            <img src="./images/9.jpg"/>
+            <a href="https://www.bmw-tunisia.com/fr/all-models/x-series/X6/2021/bmw-x6-apercu.html"><button class="btn btn-primary">BUY NOW !</button></a>
+            <p>BMW X6</p>
+        </div>
+    </div>
 </body>
 </html>
