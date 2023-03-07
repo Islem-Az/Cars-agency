@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="mercedes.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes</title>
+    <style>
+        .pics {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            margin: 0 10px;
+        }
+        .btn {
+            display: block;
+            margin-top: 10px;
+        }
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">CarNation</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="best"  href="#">best selling</s></a>
+          </li>
+          <li class="nav-item">
+            <a  class="nav-link" id="power" href="#">Most Powerful</a>
+          </li>
+          <li class="nav-item">
+            <a  class="nav-link" id="col" href="#">Available Colors</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> 
+    <div class="pics">
+        <div>
+            <img src="./images/10.jpg"/>
+            <a href="https://finder.porsche.com/us/en-US/details/porsche-cayenne-platinum-edition-new-M9OOE8"><button class="btn btn-primary">BUY NOW !</button></a>
+            <p>PORSCHE CAYENNE</p>
+        </div>
+        <div>
+            <img src="./images/panamera.png"/>
+            <a href="https://www.porsche.com/international/models/panamera/"><button class="btn btn-primary">BUY NOW !</button></a>
+            <p>PORSCHE PANAMERA</p>
+        </div>
+        <div>
+            <img src="./images/macan.png"/>
+            <a href="https://files.porsche.com/filestore/image/multimedia/none/pa3-r4-modelimage-sideshot/model/373fd3ae-de41-11eb-80d9-005056bbdc38/porsche-model.png"><button class="btn btn-primary">BUY NOW !</button></a>
+            <p>PORSCHE MACAN</p>
+        </div>
+    </div>
+</body>
+</html>
